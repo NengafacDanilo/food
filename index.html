@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makanan Favorite</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- <link rel="stylesheet" href="./app.js"> -->
+</head>
+<body>
+
+    <header>
+       <div class="icon">
+        
+        <div class="upload-container">
+            <input type="file" id="fileInput" accept="image/*">
+            <label for="fileInput">Choose an Image</label>
+        </div>
+        
+        <div class="logo">
+            <img id="logoImage" alt="Logo">
+        </div>
+       </div>
+       
+       <nav>
+        <ul>
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li class="dropdown">
+                <a href="#menu" class="dropbtn"><i class="fas fa-utensils"></i> Menu <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#menu1">Menu 1</a>
+                    <a href="#menu2">Menu 2</a>
+                    <a href="#menu3">Menu 3</a>
+                </div>
+            </li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+        </ul>
+    </nav>
+    </header>
+
+
+    <section class="intro">
+        <h1>Makanan <span>Favo</span>rite</h1>
+        <p>Makanan adalah segalanya bagi kita. Ini merupakan perpanjangan dari perasaan nasionalis, perasaan etnis, sejarah pribadimu, provinsimu, daerahmu, suku, nenekmu. Itu tidak dapat dipisahkan sejak awal.</p>
+    </section>
+    <section class="special-left">
+        <div class="special-texts">
+            <h1>Nasi Goreng Special</h1>
+            <p>Nasi goreng adalah sebuah makanan berupa nasi yang digoreng dan diaduk dalam minyak goreng, margarin, atau mentega.</p>
+            <p>Created by <strong>Ekiahmadkhusaery</strong></p>
+        </div>
+        <img src="./PIC/3.jpg" alt="Nasi Goreng Special">
+    </section>
+    <section class="menu">
+        <div class="menu-item">
+            <img src="./PIC/fries_meat_and_vegetable_202837.jpg" alt="Mie Ayam">
+            <h3>Mie Ayam</h3>
+            <p>Kenyal dan enak</p>
+            <button>+</button>
+        </div>
+        <div class="menu-item">
+            <img src="./PIC/pexels-olena-bohovyk-3323687.jpg" alt="Nasi Uduk">
+            <h3>Nasi Uduk</h3>
+            <p>Nasi dengan berbagai lauk pauk didalamnya</p>
+            <button>+</button>
+        </div>
+        <div class="menu-item">
+            <img src="./PIC/pexels-william-choquette-2641886.jpg" alt="Ayam Geprek">
+            <h3>Ayam Geprek</h3>
+            <p>Pedas, crispy dan murah meriah</p>
+            <button>+</button>
+        </div>
+    </section>
+
+    <section class="special">
+        <img src="./PIC/3.jpg" alt="Nasi Goreng Special">
+        <div class="special-text">
+            <h1>Nasi Goreng Special</h1>
+            <p>Nasi goreng adalah sebuah makanan berupa nasi yang digoreng dan diaduk dalam minyak goreng, margarin, atau mentega.</p>
+            <p>Created by <strong>Ekiahmadkhusaery</strong></p>
+        </div>
+    </section>
+
+    <footer>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia facilis a perspiciatis in dolorem nostrum. Laboriosam, deleniti accusantium? Quidem ex adipisci facilis autem ab at quisquam architecto. Mollitia, voluptates sapiente?
+    </footer>
+</body>
+
+<script>
+      document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('logoImage').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+</script>
+
+</html>
